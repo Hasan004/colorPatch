@@ -1,0 +1,32 @@
+<p class="jumbotron text-white">title works!</p>
+<button [disabled]="disables" (click)="greetingMe()">Click on me!</button>
+<p>{{appComponent.birthday | date:"MM/dd/yyyy"}}</p>
+<img [src]="imgUrl"/>
+
+<div class="colorBox" [style.backgroundColor]="bgColor">
+
+  <p>hoi</p>
+
+  <button (click)="greetingMe()"> verander img </button>
+
+</div>
+
+<div>
+  <input [(ngModel)]="inputName" type="text">
+  <p>{{inputName}}</p>
+</div>
+
+<div class="slidecontainer" (input)="onSlideChange()">
+  <input type="range" min="0" max="255" [(ngModel)]="Range1"> {{Range1}}
+  <input type="range" min="0" max="255" [(ngModel)]="Range2"> {{Range2}}
+  <input type="range" min="0" max="255" [(ngModel)]="Range3"> {{Range3}}
+  <input type="range" min="0" max="1" step="0.05" [(ngModel)]="Range4"> {{Range4}}
+</div>
+<br>
+
+<button (click)="setRanges()">set to red</button>
+
+<div class="thumbBox">
+  <app-body *ngFor="let color of colorPatchArray" [body]="body"></app-body>
+  <div class="thumb" [style.backgroundColor]="backgroundColor"></div>
+</div>

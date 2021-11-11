@@ -1,0 +1,12 @@
+img{
+  height: 20%;
+  width: 20%;
+}
+
+.thumbBox{
+  display: flex;
+  margin: 30px;
+  border: 1px solid grey;
+  padding: 5px;
+}
+
